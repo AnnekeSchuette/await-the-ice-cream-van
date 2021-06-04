@@ -6,25 +6,31 @@
   </head>
   <body>
     <main>
-      Riiiing!
-      The ice cream van arrives!
-      A friendly looking man with a mustache opens the sales window.
-      "Which-a taste do you desire?" he asked.
-      "We've-a got-a all kinds of flavor you know. Take a look-a at the menu."
-      <article class="menu">
-        <h2>Menu</h2>
-        <div>
-          <h3>Fruits / Flavors</h3>
-          <ul class="fruits"></ul>
-        </div>
-        <div>
-          <h3>Holder</h3>
-          <ul class="holder"></ul>
-          <h3>Toppings</h3>
-          <ul class="toppings"></ul>
-        </div>
-      </article>
-      <img src="./assets/ice_cream_van.svg" width="600" height="600" alt=""/>
+      <section class="intro">
+        <p><strong>Riiiiiiiiing!</strong> The ice cream van arrives in your street!</p>
+        <p>A friendly looking man with a mustache opens the sales window.
+          "Which-a taste do you desire?" he asked.</p>
+        <p>
+          "We've-a got-a all kinds of flavor you know. Take a look-a at the menu."</p>
+      </section>
+      <section class="overview">
+        <article class="menu">
+          <h2>Menu</h2>
+          <div>
+            <h3>Fruits / Flavors</h3>
+            <ul class="fruits"></ul>
+          </div>
+          <div>
+            <h3>Holder</h3>
+            <ul class="holder"></ul>
+            <h3>Toppings</h3>
+            <ul class="toppings"></ul>
+          </div>
+        </article>
+        <article class="ice-cream-van">
+          <img src="./assets/ice_cream_van.svg" width="600" height="600" alt=""/>
+        </article>
+      </section>
     </main>
     <script src="./index.js"></script>
   </body>
@@ -36,16 +42,6 @@
   }
    body {
      font-size: 18px;
-   }
-   .menu {
-     width: 300px;
-     background: #fee2c0;
-     border: 2px solid #e5b982;
-     display:grid;
-     font-size: 0.9rem;
-     grid-template-columns: repeat(2, 1fr);
-     font-family: cursive;
-     padding: var(--space-s) var(--space-l);
    }
 
    h2 {
@@ -62,6 +58,21 @@
      margin:0;
      padding:0 0 var(--space-l) var(--space-l);
      list-style:square;
+   }
+   .overview {
+     display:grid;
+     grid-template-columns: repeat(2, 1fr);
+   }
+
+   .menu {
+     width: 250px;
+     background: #fee2c0;
+     border: 2px solid #e5b982;
+     display:grid;
+     font-size: 0.9rem;
+     grid-template-columns: 3fr 2fr;
+     font-family: cursive;
+     padding: var(--space-s) var(--space-l);
    }
 
    .fruits {
