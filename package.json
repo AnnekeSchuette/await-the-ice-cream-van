@@ -1,0 +1,23 @@
+{
+  "name": "await-the-ice-cream-van",
+  "version": "1.0.0",
+  "description": "Exercise to practice asynchronous JavaScript - async / await, promise by Joy Shaheb on freecodecamp",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnekeSchuette/await-the-ice-cream-van.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnekeSchuette/await-the-ice-cream-van/issues"
+  },
+  "homepage": "https://github.com/AnnekeSchuette/await-the-ice-cream-van#readme",
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "prettier": "^2.3.0",
+    "eslint-config-prettier": "^8.3.0"
+  }
+}
