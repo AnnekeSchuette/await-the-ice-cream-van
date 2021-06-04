@@ -15,7 +15,7 @@ let stocks = {
     {name: "Water Melon", icon: "🍉"},
     {name: "Honey Melon", icon: "🍈"}
   ],
-  liquid : ["water", "milk", "ice"],
+  liquid : ["Water", "Milk", "Ice"],
   holder: ["Cone", "Cup", "Stick"],
   toppings: ["Chocolate", "Sprinkles"]
 }
