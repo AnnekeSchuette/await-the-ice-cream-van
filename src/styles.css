@@ -47,6 +47,7 @@ figcaption a {
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 90px auto;
   padding: var(--space-s) var(--space-l);
+  grid-area: 1 / 1 / span 2 / span 1;
 }
 
 .menu__headline {
@@ -65,3 +66,34 @@ padding-left:var(--space-s);
   font-size: 1.3rem;
 }
 
+.dialogue {
+  /* grid-area: 1 / 2 / span 1 / span 1; */
+  position: absolute;
+  background: #ecaec910;
+  border:1px solid #e283ad;
+  color: #e283ad;
+  padding: var(--space-m);
+  min-height:100px;
+  position:relative;
+  border-radius: 20px;
+  font-size: 1.5rem;
+}
+
+.dialogue::after {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+
+  border-top: 15px solid #e283ad;
+  position: absolute;
+  content:'';
+  bottom: -15px;
+  left: 0;
+  right:0;
+  margin:auto;
+}
+
+.ice-cream-van {
+  grid-area: 2 / 2 / span 1 / span 1;
+}
