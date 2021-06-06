@@ -1,0 +1,67 @@
+:root {
+  --space-s: 5px;
+  --space-m: 15px;
+  --space-l: 25px;
+}
+body {
+  font-size: 18px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: cursive;
+}
+
+h3 {
+  margin:0 0 var(--space-s);
+}
+
+ul {
+  margin:0;
+  padding:0 0 var(--space-l) var(--space-l);
+  list-style:square;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+figcaption a {
+  text-decoration: none;
+}
+
+.overview {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: self-start;
+}
+
+.menu {
+  width: 250px;
+  background: #fee2c0;
+  border: 2px solid #e5b982;
+  display:grid;
+  font-size: 0.9rem;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 90px auto;
+  padding: var(--space-s) var(--space-l);
+}
+
+.menu__headline {
+  grid-area: 1 / 1 / span 1 / span 2;
+  text-align:center;
+  border-bottom: 1px dashed #e5b982;
+}
+
+.menu__fruits {
+grid-area: 2 / 1 / span 1 / span 2;
+list-style:none;
+padding-left:var(--space-s);
+}
+
+.menu__fruits li::first-letter {
+  font-size: 1.3rem;
+}
+

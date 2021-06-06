@@ -30,9 +30,9 @@ let production = () => {
   console.log("Production started")
 }
 
-stocks.fruits.forEach(({name, icon}) => addMenuItem(`${icon} ${name}`, '.fruits'))
-stocks.holder.map(holder => addMenuItem(holder, '.holder'))
-stocks.toppings.map(topping => addMenuItem(topping, '.toppings'))
+stocks.fruits.forEach(({name, icon}) => addMenuItem(`${icon} ${name}`, '.menu__fruits'))
+stocks.holder.map(holder => addMenuItem(holder, '.menu__holder'))
+stocks.toppings.map(topping => addMenuItem(topping, '.menu__toppings'))
 
 function addMenuItem(el, target){
   let menu = document.querySelector(target)
