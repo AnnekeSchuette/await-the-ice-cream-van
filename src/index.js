@@ -20,6 +20,17 @@ let stocks = {
   toppings: ["Chocolate", "Sprinkles"]
 }
 
+let steps = [
+  {name: "place order", time: 3000},
+  {name: "fetch ingredients", time: 3000},
+  {name: "cut the fruit", time: 2000},
+  {name: "add fluids and ice", time: 1000},
+  {name: "start the machine", time: 1000},
+  {name: "select container", time: 2000},
+  {name: "select topping", time: 3000},
+  {name: "serve ice cream", time: 2000}
+]
+
 let order = (callProduction) => {
   console.log("Order placed.")
   console.log("Initiate production.")
