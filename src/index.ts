@@ -22,7 +22,13 @@ let stocks = {
   toppings: ["chocolate", "sprinkles"]
 }
 
-let steps = [
+let steps: {
+    name: string
+    time: number
+    text: string
+  }[]
+
+steps = [
   {name: "greeting", time: 1000, text: `Hello, dear friend!`},
   {name: "info", time: 1000, text: `We've-a got-a many sorts of flavors, you know. \n Just take a look-a at the menu.`},
   {name: "question", time: 3000, text: `Which-a ice cream flavor do you desire?`},
@@ -37,7 +43,7 @@ let steps = [
   {name: "serve ice cream", time: 2000, text: `ice cream served`}
 ]
 
-function order(time, work): Promise<any> {
+function order(time: number, work: any): Promise<any> {
   return new Promise((resolve, reject): void => {
     if (is_shop_open) {
       setTimeout((): void => {
@@ -59,7 +65,7 @@ let fruits = stocks.fruits.forEach(({name, icon}) => addMenuItem(`${icon} ${name
 let holder = stocks.holder.map(holder => addMenuItem(holder, '.menu__holder'))
 let toppings = stocks.toppings.map(topping => addMenuItem(topping, '.menu__toppings'))
 
-function addMenuItem(el, container): HTMLLIElement{
+function addMenuItem(el: string, container: string): HTMLLIElement{
   let menu = document.querySelector<HTMLDivElement>(container)
   let li = document.createElement('li')
   let text = document.createTextNode(el)
@@ -67,12 +73,12 @@ function addMenuItem(el, container): HTMLLIElement{
   return menu.appendChild(li)
 }
 
-function printDialog(text): void {
+function printDialog(text: string): void {
   const dialogue = document.querySelector<HTMLElement>('.dialogue')
   dialogue.innerText = text
 }
 
-async function* processProduction(steps): AsyncGenerator<number, void, unknown>{
+async function* processProduction(steps: Array<any>): AsyncGenerator<number, void, unknown>{
   for (let i: number = 0; i < steps.length; i++) yield order(steps[i].time, () => console.log(`${i+1}: ${steps[i].name}`)).then(() => i)
 }
 

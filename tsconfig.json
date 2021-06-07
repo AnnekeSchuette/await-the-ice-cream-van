@@ -2,9 +2,17 @@
   "compilerOptions": {
     "outDir": "src/dist",
     "target": "es6",
-    "lib": ["esnext", "dom", "es2015", "es2018", "es2015.collection", "es2015.promise"]
+    "lib": ["esnext", "dom", "es2015", "es2018", "es2015.collection", "es2015.promise"],
+    "noImplicitAny": true,
+    "sourceMap": true
   },
   "exclude": [
       "node_modules"
-  ]
+  ],
+  "rules": {
+    "typedef": [
+        true,
+        "call-signature"
+    ]
+  }
 }
