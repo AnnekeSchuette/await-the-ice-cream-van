@@ -22,6 +22,12 @@ let stocks = {
   toppings: ["chocolate", "sprinkles"]
 }
 
+interface Steps {
+  name: string
+  time: number
+  text: string
+}[]
+
 let steps: {
     name: string
     time: number
@@ -78,10 +84,10 @@ function printDialog(text: string): void {
   dialogue.innerText = text
 }
 
-async function* processProduction(steps: Array<any>): AsyncGenerator<number, void, unknown>{
+async function* processProduction(steps: Steps[]): AsyncGenerator<number, void, unknown>{
   for (let i: number = 0; i < steps.length; i++) yield order(steps[i].time, () => console.log(`${i+1}: ${steps[i].name}`)).then(() => i)
 }
 
-(async function loopSteps(): Promise<any> {
+(async function loopSteps(): Promise<void> {
   for await (let i of processProduction(steps)) printDialog(steps[i].text);
 })();
